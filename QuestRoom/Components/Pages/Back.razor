@@ -1,0 +1,54 @@
+@page "/Back"
+@using QuestRoom.Database
+@using QuestRoom.Model
+@rendermode InteractiveServer
+@inject QuestRoomContext ef
+
+<div class="Main">
+    <div class="Colon">
+        <div class="Body">
+            <div class="Rolen">
+                <div style="margin-top: 5px; text-align: center; margin-left: 20px" class="Colon">
+                    <a style="text-decoration: none" href="https://localhost:7148/">
+                        <h1 class="MainText">Show</h1>
+                        <h1 class="MainText">Day</h1>
+                    </a>
+                </div>
+                <div style="margin-top: 45px; margin-left: 140px" class="Rolen">
+                    <h3 class="MainText">День рождения</h3>
+                    <h3 style="margin-left: 100px" class="MainText">Корпоратив</h3>
+                    <h3 style="margin-left: 100px" class="MainText">Свадьба</h3>
+                </div>
+            </div>
+        </div>
+        <div class="Under">
+            <div class="Rolen">
+                <div style="margin-left: 120px">
+                    <EditForm FormName="formAddItem" Model="_feedBack" OnValidSubmit="@Submit">
+                        <DataAnnotationsValidator></DataAnnotationsValidator>
+                        <div class="Colon">
+                            <h1>Пожалуйста, оставьте отзыв</h1>
+                            <input class="FeedText" @bind="_feedBack.Feed" type="text"/>
+                            <div style="margin-top: 10px" class="Rolen">
+                                <button class="BookButton" type="submit">Оценить</button>
+                                <h3 style="padding-top: 10px; margin-left: 50px">Оценка : </h3>
+                                <input class="FeedRate" @bind="_feedBack.Rate" type="number"/>
+                            </div>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private FeedBack _feedBack = new FeedBack();
+
+    private void Submit(EditContext args)
+    {
+        ef.Add(_feedBack);
+        ef.SaveChanges();
+        _feedBack = new FeedBack();
+    }
+}

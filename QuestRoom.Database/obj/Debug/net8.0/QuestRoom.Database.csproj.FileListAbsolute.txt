@@ -1,0 +1,17 @@
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\bin\Debug\net8.0\QuestRoom.Database.deps.json
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\bin\Debug\net8.0\QuestRoom.Database.runtimeconfig.json
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\bin\Debug\net8.0\QuestRoom.Database.dll
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\bin\Debug\net8.0\QuestRoom.Database.pdb
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\bin\Debug\net8.0\QuestRoom.Model.dll
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\bin\Debug\net8.0\QuestRoom.Model.pdb
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\obj\Debug\net8.0\QuestRoom.Database.csproj.AssemblyReference.cache
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\obj\Debug\net8.0\QuestRoom.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\obj\Debug\net8.0\QuestRoom.Database.AssemblyInfoInputs.cache
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\obj\Debug\net8.0\QuestRoom.Database.AssemblyInfo.cs
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\obj\Debug\net8.0\QuestRoom.Database.csproj.CoreCompileInputs.cache
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\obj\Debug\net8.0\QuestRoo.71397B35.Up2Date
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\obj\Debug\net8.0\QuestRoom.Database.dll
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\obj\Debug\net8.0\refint\QuestRoom.Database.dll
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\obj\Debug\net8.0\QuestRoom.Database.pdb
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\obj\Debug\net8.0\QuestRoom.Database.genruntimeconfig.cache
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Database\obj\Debug\net8.0\ref\QuestRoom.Database.dll

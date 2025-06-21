@@ -1,0 +1,11 @@
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Model\bin\Debug\net8.0\QuestRoom.Model.deps.json
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Model\bin\Debug\net8.0\QuestRoom.Model.dll
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Model\bin\Debug\net8.0\QuestRoom.Model.pdb
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Model\obj\Debug\net8.0\QuestRoom.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Model\obj\Debug\net8.0\QuestRoom.Model.AssemblyInfoInputs.cache
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Model\obj\Debug\net8.0\QuestRoom.Model.AssemblyInfo.cs
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Model\obj\Debug\net8.0\QuestRoom.Model.csproj.CoreCompileInputs.cache
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Model\obj\Debug\net8.0\QuestRoom.Model.dll
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Model\obj\Debug\net8.0\refint\QuestRoom.Model.dll
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Model\obj\Debug\net8.0\QuestRoom.Model.pdb
+C:\Users\я\RiderProjects\QuestRoom\QuestRoom.Model\obj\Debug\net8.0\ref\QuestRoom.Model.dll

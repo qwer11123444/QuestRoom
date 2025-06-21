@@ -1,0 +1,72 @@
+﻿@page "/"
+@using QuestRoom.Database
+@using QuestRoom.Model
+@inject QuestRoomContext ef
+@rendermode InteractiveServer
+<PageTitle>Home</PageTitle>
+
+<div class="Main">
+    <div class="Colon">
+        <div class="Body">
+            <div class="Rolen">
+                <div style="margin-top: 5px; text-align: center; margin-left: 20px" class="Colon">
+                    <h1 class="MainText">Show</h1>
+                    <h1 class="MainText">Day</h1>
+                </div>
+                <div style="margin-top: 45px; margin-left: 140px" class="Rolen">
+                    <h3 class="MainText">День рождения</h3>
+                    <h3 style="margin-left: 100px" class="MainText">Корпоратив</h3>
+                    <h3 style="margin-left: 100px" class="MainText">Свадьба</h3>
+                </div>
+            </div>
+        </div>
+        <div class="Under">
+            @foreach (var item in ef.Quests.ToList())
+            {
+                <div style="margin-bottom: 40px" class="Rolen">
+                    <div>
+                        <img class="UnderImage" src="Image/image_2025-06-20_16-28-29.png"/>
+                    </div>
+                    <div class="Colon">
+                        <div style="height: 160px" class="Rolen">
+                            <div class="UnderText">
+                                <h3>@item.Tittle</h3>
+                                <h5>@item.Desription</h5>
+                            </div>
+                            <div class="UnderInf">
+                                <h5>От @item.PeopleCount человек</h5>
+                                <h5>@item.Price / чел.</h5>
+                                <input type=""/>
+                            </div>  
+                        </div>
+                        <div>
+                            <a href="https://localhost:7148/book">
+                                <button class="UnderBut" type="submit" @onclick="() => AddBook(item.Id)">Забронировать</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@code
+{
+    private Quest _quest;
+
+    private Quest bookQuest;
+    private Booking _booking = new Booking();
+
+    private void AddBook(int questId)
+    {
+        bookQuest = ef.Quests.FirstOrDefault(f => f.Id == questId);
+        _booking.Id = questId;
+        _booking.BookTittle = bookQuest.Tittle;
+        _booking.BookDecription = bookQuest.Desription;
+        _booking.BookPeopleCount = bookQuest.PeopleCount;
+        _booking.BookPrice = bookQuest.Price * bookQuest.PeopleCount;
+        ef.Add(_booking);
+        ef.SaveChanges();
+    }
+}

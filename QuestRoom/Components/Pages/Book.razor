@@ -1,0 +1,102 @@
+﻿@page "/book"
+@using QuestRoom.Database
+@using QuestRoom.Model
+@rendermode InteractiveServer
+
+@inject QuestRoomContext ef
+
+<PageTitle>Book</PageTitle>
+<div class="Main">
+    <div class="Colon">
+        <div class="Body">
+            <div class="Rolen">
+                <div style="margin-top: 5px; text-align: center; margin-left: 20px" class="Colon">
+                    <a style="text-decoration: none" href="https://localhost:7148/">
+                        <h1 class="MainText">Show</h1>
+                        <h1 class="MainText">Day</h1>  
+                    </a>
+                </div>
+                <div style="margin-top: 45px; margin-left: 140px" class="Rolen">
+                    <h3 class="MainText">День рождения</h3>
+                    <h3 style="margin-left: 100px" class="MainText">Корпоратив</h3>
+                    <h3 style="margin-left: 100px" class="MainText">Свадьба</h3>
+                </div>
+            </div>
+        </div>
+        <div class="Under">
+            <div style="margin-left: 20px" class="Rolen">
+                <div>
+                    @if (_booking is not null)
+                    {
+                        @foreach (var item in ef.Bookings.ToList())
+                        {
+                            <div class="Colon @(item.Id == _booking.Id ? "selected-quest" : "")">
+                                <div>
+                                    <img class="BookImage" src="Image/image_2025-06-20_16-28-29.png"/>
+                                </div>
+                                <div class="BookBase">
+                                    <div class="Colon">
+                                        <h3>@item.BookTittle</h3>
+                                        <h5>@item.BookDecription</h5>
+                                        <h5>Количество человек: @item.BookPeopleCount</h5>
+                                        <h5> Итого: @item.BookPrice</h5>
+                                        <div class="Colon">
+                                            <button class="BookButton" @onclick="() => DeleteBook(item)">Удалить/Вернуться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+                <div class="BookEdit">
+                    <EditForm FormName="formAddItem" Model="_client" OnValidSubmit="@Submit">
+                        <DataAnnotationsValidator></DataAnnotationsValidator>
+                        <div class="Colon">
+                            <h3>Пожалуйста, заполните данные</h3>
+                            <input class="BookText" placeholder="Имя" @bind="_client.Name" type="text"/>
+                            <input class="BookText" placeholder="Фамилия" @bind="_client.FirstName"/>
+                            <input class="BookText" placeholder="Отчество" @bind="_client.LastName" type="text"/>
+                            <input class="BookText" placeholder="Номер телефона" @bind="_client.PhoneNumber" type="number"/>
+                            <h3>Выберите дату</h3>
+                            <input class="BookText" @bind="_time.RecordDate" type="date"/>
+                            <input class="BookText" @bind="_time.RecordTime" type="time"/>
+                            <a href="https://localhost:7148/back">
+                                <button class="BookButton">Сохранить</button>  
+                            </a>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code
+{
+    private Booking _booking = new Booking();
+    private Client _client = new Client();
+    private Time _time = new Time();
+
+    private async Task DeleteBook(Booking deleteBooking)
+    {
+        ef.Bookings.Remove(deleteBooking);
+        await ef.SaveChangesAsync();
+        await InvokeAsync(StateHasChanged);
+    }
+    
+    private async Task Save()
+    {
+        ef.Update(_booking);
+        await ef.SaveChangesAsync();
+    }
+
+    private void Submit(EditContext args)
+    {
+        ef.Add(_client);
+        ef.Add(_time);
+        ef.SaveChanges();
+        _client = new Client();
+        _time = new Time();
+    }
+}

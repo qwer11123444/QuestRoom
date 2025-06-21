@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\я\\RiderProjects\\QuestRoom\\QuestRoom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QuestRoom.bundle.scp.css",
+      "PackagePath": "staticwebassets\\QuestRoom.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\я\\RiderProjects\\QuestRoom\\QuestRoom\\wwwroot\\Image\\image_2025-06-20_16-28-29.png",
+      "PackagePath": "staticwebassets\\Image\\image_2025-06-20_16-28-29.png"
+    },
+    {
+      "Id": "C:\\Users\\я\\RiderProjects\\QuestRoom\\QuestRoom\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\я\\RiderProjects\\QuestRoom\\QuestRoom\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\я\\RiderProjects\\QuestRoom\\QuestRoom\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\я\\RiderProjects\\QuestRoom\\QuestRoom\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.QuestRoom.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.QuestRoom.props",
+      "PackagePath": "build\\QuestRoom.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.QuestRoom.props",
+      "PackagePath": "buildMultiTargeting\\QuestRoom.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.QuestRoom.props",
+      "PackagePath": "buildTransitive\\QuestRoom.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

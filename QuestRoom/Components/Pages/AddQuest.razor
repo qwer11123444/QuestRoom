@@ -1,0 +1,59 @@
+﻿@page "/counter"
+@using QuestRoom.Database
+@using QuestRoom.Model
+@rendermode InteractiveServer
+@inject QuestRoomContext ef
+
+<PageTitle>AddQuest</PageTitle>
+
+<PageTitle>Book</PageTitle>
+<div class="Main">
+    <div class="Colon">
+        <div class="Body">
+            <div class="Rolen">
+                <div style="margin-top: 5px; text-align: center; margin-left: 20px" class="Colon">
+                    <a style="text-decoration: none" href="https://localhost:7148/">
+                        <h1 class="MainText">Show</h1>
+                        <h1 class="MainText">Day</h1>
+                    </a>
+                </div>
+                <div style="margin-top: 45px; margin-left: 140px" class="Rolen">
+                    <h3 class="MainText">День рождения</h3>
+                    <h3 style="margin-left: 100px" class="MainText">Корпоратив</h3>
+                    <h3 style="margin-left: 100px" class="MainText">Свадьба</h3>
+                </div>
+            </div>
+        </div>
+        <div style="margin-left: 800px; width: 300px" class="Under">
+            <div style="margin-left: 20px" class="Rolen">
+                <div>
+                    <EditForm FormName="formAddItem" Model="_quest" OnValidSubmit="Submit">
+                        <DataAnnotationsValidator></DataAnnotationsValidator>
+                        <div class="Colon">
+                            <p>Название мероприятия</p>
+                            <input type="text" @bind="_quest.Tittle"/>
+                            <p>Описание квеста</p>
+                            <input type="text" @bind="_quest.Desription"/>
+                            <p>Минимальное кол-во человек</p>
+                            <input type="number" @bind="_quest.PeopleCount"/>
+                            <p>Цена / человека</p>
+                            <input type="number" @bind="_quest.Price"/>
+                            <button type="submit">Добавить</button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private Quest _quest = new Quest();
+
+    private void Submit(EditContext arg)
+    {
+        ef.Add(_quest);
+        ef.SaveChanges();
+        _quest = new Quest();
+    }
+}
