@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuestRoom.Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40c17435c7e8370ef06145f08e875ad73f16c648")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9e7f859965c48b115c45296414ae168fef10e5d")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuestRoom.Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuestRoom.Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
